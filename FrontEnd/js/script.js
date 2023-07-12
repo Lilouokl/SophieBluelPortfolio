@@ -5,8 +5,13 @@
 
 // Fonction qui va lancer tout le projet
 function init(){
-    // Chercher et afficher les filtres
-    getFilters()
+    // Récupère dans le localStorage le token, ET
+    // Si il n'y a PAS de token, affiche les filtres
+    const token = localStorage.getItem('token');
+    if(!token){
+        // Chercher et afficher les filtres
+        getFilters()
+    }
 
     // Chercher et afficher les travaux
     getWorks()
@@ -19,6 +24,8 @@ async function getFilters(){
     const req = await fetch('http://localhost:5678/api/categories')
     const datas = await req.json()
 
+    // Ajoute le bouton "tous"
+    document.querySelector('.filters').insertAdjacentHTML('beforeend', '<button data-categoryid="0">Tous</button>')
     // On possède les données, on les affiche sur le DOM
     for(let i = 0; i < datas.length; i++){
         // Créer un bouton

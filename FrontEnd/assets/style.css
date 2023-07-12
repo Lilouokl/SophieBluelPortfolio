@@ -180,6 +180,22 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0
+}
+.h1 { 
+	display: flex;
+    flex-direction: column;
+    font-family: 'Syne';
+    font-size: 22px;
+    font-weight: 800;
+    color: #B1663C;
+}
+	
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
@@ -209,3 +225,45 @@ footer nav ul {
 	color: #1D6154;
     font-family: Syne;
 }
+
+.container-login {
+	margin-top: 152px;
+	padding-bottom: 300px;
+}
+
+.Login {
+	display: flex;
+	justify-content: center;
+	
+}
+
+a  {
+	text-decoration: none;
+	color: black;
+}
+
+.bandeauAdmin {
+	background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttonAdmin {
+	border-radius: 100px;
+	border: none;
+    padding: 6px;
+}
+
+.buttonModif { 
+	color : black ;
+	border : none; 
+	background-color: white;
+	cursor: pointer;
+
+	
+
+}
+
