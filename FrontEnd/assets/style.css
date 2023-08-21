@@ -254,16 +254,243 @@ a  {
 .buttonAdmin {
 	border-radius: 100px;
 	border: none;
-    padding: 6px;
-}
-
-.buttonModif { 
-	color : black ;
-	border : none; 
-	background-color: white;
+    padding: 10px;
 	cursor: pointer;
+	margin: 10px;
+}
 
-	
+button {
+	background-color: white;
+	color: black;
+	border: none;
+	cursor: pointer;
+	font-family: Work Sans;
+    font-size: 14px;
+	padding: 15px 75px;
 
 }
 
+/* modal */
+
+.modal {
+	display: none;
+	background:#0000009d;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.modalContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+}
+#modalGalery, #modalAdd {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	width: 630px;
+	height: 730px;
+	background: white;
+	border-radius: 10px;
+}
+#modalGalery h2, #modalAdd H2 {
+	font-family: 'Work Sans' ;
+	font-size: 26px;
+	font-weight: 400;
+	text-align: center;
+	color: black;
+	margin-top: 60px;
+	margin-bottom: 46px;
+	padding-top: 20px;
+}
+.separator {
+	width: 420px;
+	height: 1px;
+	background: #B3B3B3;
+	margin: 47px auto 0 auto;
+}
+.btn-exit {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: none;
+	border: none;
+}
+.btn-back {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	background: none;
+	border: none;
+}
+.btn-exit i, .btn-back i {
+	font-weight: 600;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.btn-addWork {
+	background: #1D6154;
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
+}
+.addImg label {
+    color: #306685;
+    background: #CBD6DC;
+    padding: 10px 33px;
+    border-radius: 50px;
+}
+
+.btn-delete {
+	font-family: 'Work Sans';
+	font-weight: 400;
+	color: #D65353;
+	border: none;
+	background: none;
+}
+.btnModalModalAdd {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.addImgInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-send {
+	background: grey; 
+	border-radius: 60px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 10px 27px;
+	text-align: center;
+	width: 237px;
+	cursor: pointer;
+	color: #FFFFFF;
+	margin-top: 38px;
+}
+.btnModalGalery {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 23px;
+}
+
+.addImg {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 420px;
+	height: 169px;
+	background: #E8F1F7;
+	border-radius: 10px;
+	gap: 12px;
+	margin: 0 105px;
+}
+
+.addImg label {
+	color: #306685;
+	background: #CBD6DC;
+	padding: 10px 33px;
+	border-radius: 50px;
+	cursor: pointer;
+}
+.btnModalModalAdd {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#modalAdd {
+	display:none;
+}
+
+#uploadImg {
+	display: none;
+}
+
+.fa-regular.fa-image {
+	color : #B9C5CC ;
+	font-size: 58px;
+}
+
+#titre, #categorie {
+    width: 420px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.1);
+}
+.addImgInfo label {
+    margin: 21px 0 10px 0;
+}
+
+.galeryContainer img { 
+	width: 100px;
+}
+
+.galeryContainer {
+	display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 18px;
+	padding: 25px;
+}
+
+.icons-container i {
+    font-size: 12px;
+    margin: 2px;
+    color: white;
+    background: #000000;
+    padding: 2px;
+	cursor: pointer;
+}
+	
+.icons-container {
+	position: absolute;
+	top: 2px;
+	right: 15px;
+
+  }
+  
+ .galeryContainer > div {
+	position:relative;
+ }
+
+ .EditLink {
+	color : black ;
+	cursor: pointer;
+ }
+
+ #imagePreview {
+	position: absolute;
+	max-width: 400px;
+	max-height: 155px;
+	object-fit: cover;
+}

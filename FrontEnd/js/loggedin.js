@@ -21,7 +21,11 @@ if(token) {
 
     // Ajouter le bandeau en haut de la page
     const bandeau = `
-            <div class="bandeauAdmin"<p>Mode édition <button class="buttonAdmin">publier les changements</button></p></div>
+            <div class="bandeauAdmin"> 
+                <p> 
+                    <i class="fa-solid fa-pen-to-square"></i> Mode édition <button class="buttonAdmin">publier les changements</button>
+                </p>
+            </div>
     `
     const body = document.querySelector('body')
 
@@ -29,18 +33,54 @@ if(token) {
 
 
     // Ajouter les boutons "modifier"
+    // bouton sous image 
 
-    const btnModif = `
-            <div class="divModif"> 
-             <button class="buttonModif"> Modifier </button>
-            </div>` ;
 
-// comment ajouter les icones ?? 
 
-    const btn = document.querySelector('#introduction') ;
-    const btnPortfolio = document.querySelector('#Mesprojets') ;
 
-    btn.insertAdjacentHTML('afterend', btnModif);
-    btnPortfolio.insertAdjacentHTML('afterbegin', btnModif);
+    /* const button = document.createElement("button");
+    button.textContent = "modifier";
+    
+    const icon = document.createElement("icone");
+    icon.classListAdd("fa-regular" , "fa-pen-to-square") 
+
+    const parentElement = document.getElementById("figure");
+    parentElement.appendChild(button);
+
+    // bouton mes projets 
+
+   function anotherbutton () {
+   const anotherParentElement = document.getElementById("portfolio");
+        anotherParentElement.appendChild(button);
+    } */
+    
+
+    /*const button = document.createElement("button");
+    button.textContent = "modifier";
+    var parentElement = document.getElementById("figure");
+    parentElement.appendChild(button);*/
+
+    const buttonModifier = `<button> <i class="fa-solid fa-pen-to-square"></i> Modifier </button>`;
+    const figure = document.querySelector("#figure")
+    figure.insertAdjacentHTML("beforeend", buttonModifier)
+
+    // bouton mes projets 
+
+    /*const button2 = document.createElement("button") ;
+    button2.textContent = "modifier" ;
+    button2.id = "modal-trigger" ;
+    var parentElement = document.getElementById("projets"); 
+    parentElement.appendChild(button2);*/
+
+    const projets = document.querySelector('#projets')
+    projets.insertAdjacentHTML("beforeend", buttonModifier)
+
+    
+    /* ajout icone 
+
+    const iconEdit = createIconElement("fa-regular", "fa-pen-to-square");
+    var parentIcone = document.getElementById("button");
+    parentIcone.appendChild(iconEdit)
+    */
 
 }

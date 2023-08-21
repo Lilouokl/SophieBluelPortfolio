@@ -56,7 +56,7 @@ async function getWorks(){
 
     for (const data of response) {
         const figure = `
-            <figure data-categoryid="${data.categoryId}">
+            <figure data-id="${data.id}" data-categoryid="${data.categoryId}">
                 <img src="${data.imageUrl}" alt="${data.title}">
                 <figcaption>${data.title}</figcaption>
             </figure>

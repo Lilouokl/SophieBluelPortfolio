@@ -44,43 +44,7 @@ async function loginUser() {
     } else {
         alert("Email ou mot de passe incorrect");
     }
-
-
-
-    //Vérification du token :
-    /*const token = localStorage.token;
-    if (token) {
-        
-        fetch("http://localhost:5678/api/works", {
-        headers: {
-            Accept: "application/json",
-            Authorization: `Bearer ${token}`,
-        },
-        })
-    }
-
-    then((response) => {
-        if (response.ok) {
-          console.log(token);
-          return response.json();
-        } else {
-         Error("Erreur lors de la récupération des données.");
-        }
-      })
-      */
     
 
 }
 
-
-
-
-
-/** Essai fonction de deconnexion 
-
-    function deconnexion() {
-    localStorage.removeItem("token");
-    window.location.href = "index.html";
-    }
-
- */

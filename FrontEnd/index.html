@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/b7f3817385.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -26,7 +27,7 @@
 </header>
 <main>
 	<section id="introduction">
-		<figure>
+		<figure id="figure">
 			<img src="./assets/images/sophie-bluel.png" alt="">
 		</figure>
 		<article>
@@ -37,7 +38,7 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2 id="Mesprojets"> Mes Projets</h2>
+		<h2 id="projets"> Mes Projets</h2>
 		<div class="filters">
 			
 		</div>
@@ -68,7 +69,89 @@
 	</nav>
 </footer>
 
+
+<div class="modal">
+	<div class="modalContainer">
+		<div id="modalGalery" class="modalGalery">
+			
+			<button class="btn-exit">
+				<i class="fa-solid fa-xmark"></i> 
+			</button>
+
+			<h2>Galerie photo</h2>
+
+			<div class="galeryContainer" id="galeryContainer">
+			</div>
+
+			<div class="separator"></div>
+
+			<div class="btnModalGalery">
+				<button class="btn-addWork">
+					Ajouter une photo
+				</button>
+			
+				<button class="btn-delete">
+					Supprimer la galerie
+			</button>
+			</div>
+			
+		</div>
+
+	
+		<div id="modalAdd">
+
+			<button class="btn-back">
+				<i class="fa-solid fa-arrow-left"></i>
+			</button>
+
+			<button class="btn-exit">
+				<i class="fa-solid fa-xmark"></i> 
+			</button>
+
+			<h2>Ajout photo</h2>
+
+			<form method="POST" id="sendImg" > 
+				<div id="returnPreview">
+					 <!-- <i class="fa-solid fa-arrows-rotate"></i> -->
+				</div>
+				<div class="addImg">
+					<i class="fa-regular fa-image"></i>
+					<label for="uploadImg">+ Ajouter photo</label>
+					<!-- cacher le input ?? -->  
+					<input type="file" id="uploadImg" onchange="previewPicture(this)" 
+						 
+						accept=".jpg,.jpeg,.png" onchange="checkSubmitButton()"> 
+					<img src="#" alt="" id="imagePreview"> 
+					<p>jpg, png : 4mo max</p>
+				</div>
+
+				<div class="addImgInfo">
+					<label for="titre">Titre</label>
+					<input type="text" name="titre" id="titre" onchange="checkSubmitButton()">
+
+					<label for="categorie">Catégorie</label>
+					<select name="categorie" id="categorie" onchange="checkSubmitButton()"></select>
+				</div>
+				<div class="separator"></div>
+
+				<div class="btnModalModalAdd">
+					<p class="errorModal"></p>
+					<button disabled type="submit" class="btn-send" id="btnSubmit">
+						Valider
+					</button>
+				</div>
+			</form>
+
+		</div>
+	
+	</div>
+</div>
+
+
+
+
 <script src="js/script.js"></script>
 <script src="js/loggedin.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
